@@ -1,0 +1,1 @@
+angular.module('codeSheWrote', ['ui.bootstrap', 'templates']);

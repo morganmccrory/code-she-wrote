@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code She Wrote</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-app="codeSheWrote" ng-controller="MainCtrl">
+<nav>
+  <ul id="nav-left">
+    <li><a href="/about">ABOUT</a></li> |
+    <li><a href="/writing">WRITING</a></li> |
+    <li><a href="/contact">CONTACT</a></li>
+  </ul>
+  <ul id="nav-right">
+    <li><a href="http://www.linkedin.com/in/morganmccrory" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="http://www.github.com/morganmccrory" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+    <li><a href="http://www.twitter.com/morganmccrory" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="mailto:morganmccrory@gmail.com"><i class="fa fa-envelope"></i></a></li>
+    <li id="nav-search"><i class="fa fa-search"></i></li>
+  </ul>
+</nav>
+<header>
+  <a href='/'><%= image_tag("codeshewrote.jpg")%></a>
+</header>
+<section id="main">
+  <article class="post">
+    <%= yield %>
+  </article>
+</section>
+</body>
+</html>

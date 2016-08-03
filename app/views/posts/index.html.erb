@@ -1,0 +1,45 @@
+<main>
+  <article ng-repeat="post in posts | orderBy: '-created_at' ">
+    <section class="post-title">
+      {{ post.title }}
+    </section>
+
+    <section class="post-date">
+      {{ post.created_at | date }}
+    </section>
+
+    <section class="post-content">
+      <p ng-bind-html="renderHtml(post.content)"></p>
+    </section>
+
+    <section class="post-social-menu">
+      <ul>
+        <li><a ng-click="openComments(post)"><i class="fa fa-comments"></i> {{ post.comments.length }} comments</a></li>
+
+        <li><a ng-click="updateLikes(post)" ng-init="post.liked='likes'"><i class="fa fa-heart"></i> {{ post.likes }} {{ post.liked }}</a></li>
+
+        <li><a ng-click="share(post)"><i class="fa fa-share-alt"></i> share</a></li>
+      </ul>
+
+      <div ng-init="post.showComments=false" ng-show="post.showComments==true" >
+        <div ng-repeat="comment in post.comments" class="comment-section">
+              {{comment.body}} <br>
+              <span class="comment-by">posted by {{comment.author}} on {{comment.created_at | date }}
+        </div>
+        <%= render 'comments/form' %>
+      </div>
+
+      <div>
+
+      </div>
+
+    </section>
+
+    <section class="post-categories">
+      <span class="categories">categories</span><br>
+      <span ng-repeat="category in post.categories">
+        {{ category.name }}{{$last ? '' : '  //  '}}
+      </div>
+    </section>
+  </article>
+</main>

@@ -1,0 +1,221 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-color: #ffffff;
+  color: #505050;
+  font-family: sans-serif;
+}
+
+a {
+  color: #87CEFA;
+}
+
+a:hover {
+  color: #9c9c9c;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:active {
+  color: #9c9c9c;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  margin-top: 3em;
+}
+
+header img {
+  width: 15%;
+}
+
+nav {
+  background-color: black;
+  font-size: 8.5pt;
+}
+
+nav ul {
+  margin: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li {
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+}
+
+nav ul li a:hover {
+  color: #87CEFA;
+  text-decoration: none;
+}
+
+nav ul li a:active {
+  color: #87CEFA;
+}
+
+#nav-left {
+  word-spacing: .5em;
+  padding: 0.75% 0% 0.75% 12%;
+}
+
+#nav-right {
+  float: right;
+  word-spacing: 1em;
+  font-size: 10.5pt;
+  padding: 0.75% 12% 0.75% 0%;
+}
+
+#main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
+.post {
+  margin-top: 8%;
+}
+
+.post-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: x-large;
+}
+
+.post-date {
+  color: #9c9c9c;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-size: small;
+}
+
+.post-social-menu ul{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-social-menu ul li {
+  display: inline;
+  padding-right: 2.5em;
+}
+
+.post-categories {
+  color: #9c9c9c;
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+.categories {
+  font-style: italic;
+}
+
+
+/*Contact Page*/
+#contact-page {
+  text-align: center;
+}
+
+/*About Me Page*/
+.about-header {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: large;
+  letter-spacing: .02em;
+}
+
+#about-me-page b {
+  font-weight: bold;
+}
+
+#about-me-pic img{
+  float: right;
+  width: 150px;
+  margin-top: -6%;
+  border-radius: 100px;
+  margin-left: 5%;
+  margin-bottom: 2%;
+}
+
+.comment-section {
+  margin-bottom: 5%;
+}
+
+.comment-by {
+  font-style: italic;
+}
+
+.btn-info {
+  background-image: none !important;
+  background-color: #87CEFA;
+  border: 1px solid #87CEFA;
+}
+
+.btn-info:visited {
+  background-color: #87CEFA;
+  border: 1px solid #87CEFA;
+}
+
+.btn-info:link {
+  background-color: #87CEFA;
+  border: 1px solid #87CEFA;
+}
+
+.btn-info:hover {
+  background-color: #9c9c9c;
+  border: 1px solid #9c9c9c;
+}
+
+.btn-info:focus {
+  background-color: #87CEFA;
+  border: 1px solid #87CEFA;
+}
+
+.btn-info:active {
+  background-color: #9c9c9c;
+  border: 1px solid #9c9c9c;
+}
+
+.form-control {
+  border: 1px solid #9c9c9c;
+}
+
+.form-control::-moz-placeholder {
+  color: #9c9c9c;
+}
+.form-control:-ms-input-placeholder {
+  color: #9c9c9c;
+}
+.form-control::-webkit-input-placeholder {
+  color: #9c9c9c;
+}
+
+.share {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
